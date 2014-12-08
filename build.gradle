@@ -1,6 +1,7 @@
 
 apply plugin: 'idea'
 apply plugin: 'java'
+apply plugin: 'jetty'
 
 idea.project.languageLevel = '1.7'
 idea.project.jdkName = '1.7'
