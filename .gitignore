@@ -1,6 +1,8 @@
 .DS_Store
 /bin
+/build
 /target
+/.gradle
 acceptance/bin
 acceptance/.settings/
 acceptance/logs/

@@ -1,0 +1,20 @@
+
+apply plugin: 'idea'
+apply plugin: 'java'
+
+idea.project.languageLevel = '1.7'
+idea.project.jdkName = '1.7'
+
+buildscript {
+  repositories {
+    mavenCentral()
+  }
+}
+dependencies {
+    compile fileTree(dir: 'lib/build', include: '*.jar')
+    compile fileTree(dir: 'lib/runtime', include: '*.jar')
+}
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1'
+
+}
