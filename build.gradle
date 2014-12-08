@@ -5,6 +5,8 @@ apply plugin: 'java'
 idea.project.languageLevel = '1.7'
 idea.project.jdkName = '1.7'
 
+ant.importBuild 'build.xml'
+
 buildscript {
   repositories {
     mavenCentral()
@@ -13,8 +15,26 @@ buildscript {
 dependencies {
     compile fileTree(dir: 'lib/build', include: '*.jar')
     compile fileTree(dir: 'lib/runtime', include: '*.jar')
+    testCompile fileTree(dir: 'lib/tools', include: '*.jar')
+
 }
 task wrapper(type: Wrapper) {
     gradleVersion = '2.2.1'
+
+}
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main'
+        }
+        resources {
+            srcDir 'src/main/resources'
+        }
+    }
+    test {
+        java {
+            srcDir 'src/unit'
+        }
+    }
 
 }

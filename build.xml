@@ -154,15 +154,16 @@
     </macrodef>
 
     <!-- Targets -->
-    <target name="clean">
+    <!-- <target name="clean">
         <delete dir="${target.dir}"/>
-    </target>
+    </target> 
 
     <target name="jar">
         <compileToJar srcdir="${main.src.dir}"
                       destfile="${main.jar}"
                       classpathref="main.build.classpath"/>
     </target>
+-->
 
     <target name="util-jar">
         <compileToJar srcdir="${util.src.dir}"
@@ -197,10 +198,10 @@
 
 
     <!-- Helpers/Wrappers -->
-    <target name="build" depends="unit-test, war"
+   <!-- <target name="build" depends="unit-test, war"
             description="Produce all artifacts"/>
     <target name="rebuild" depends="clean, build"
-            description="Clean and build"/>
+            description="Clean and build"/> -->
 
     <target name="jetty" depends="war, util-jar"
             description="Start jetty with application">
