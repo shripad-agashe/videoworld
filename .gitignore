@@ -11,3 +11,6 @@ acceptance/sahi/userdata/browser
 acceptance/sahi/userdata/certs
 acceptance/sahi/userdata/logs
 .idea/workspace.xml
+videoworld.iws
+videoworld.ipr
+videoworld.iml

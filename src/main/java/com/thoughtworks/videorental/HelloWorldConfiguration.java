@@ -1,13 +1,8 @@
 package com.thoughtworks.videorental;
 
-import com.example.helloworld.core.Template;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
-import io.dropwizard.db.DataSourceFactory;
 import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 public class HelloWorldConfiguration extends Configuration {
     @NotEmpty
@@ -36,17 +31,4 @@ public class HelloWorldConfiguration extends Configuration {
         this.defaultName = defaultName;
     }
 
-    public Template buildTemplate() {
-        return new Template(template, defaultName);
-    }
-
-    @JsonProperty("database")
-    public DataSourceFactory getDataSourceFactory() {
-        return database;
-    }
-
-    @JsonProperty("database")
-    public void setDataSourceFactory(DataSourceFactory dataSourceFactory) {
-        this.database = dataSourceFactory;
-    }
 }
